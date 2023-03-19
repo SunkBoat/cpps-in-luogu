@@ -7,4 +7,6 @@ upd on 2023.03.19：
 
 ![](https://github.com/SunkBoat/cpps-in-luogu/blob/main/picture/image.png)
 
+![](https://s1.ax1x.com/2023/03/19/ppY7lFI.png)
+
 6
