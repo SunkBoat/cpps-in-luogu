@@ -22,7 +22,7 @@ void pushdown(int p, int s, int t, int m) {
 }
 
 void build(int l, int r, int p) {
-    //l ±íÊ¾Çø¼ä×ó¶Ëµã£¬r ±íÊ¾Çø¼äÓÒ¶Ëµã£¬p ±íÊ¾Çø¼äµ±Ç°½Úµã 
+    //l è¡¨ç¤ºåŒºé—´å·¦ç«¯ç‚¹ï¼Œr è¡¨ç¤ºåŒºé—´å³ç«¯ç‚¹ï¼Œp è¡¨ç¤ºåŒºé—´å½“å‰èŠ‚ç‚¹ 
     if (l == r) {
         d[p] = a[l];
         return;
@@ -34,7 +34,7 @@ void build(int l, int r, int p) {
 }
 
 ll getsum(int l, int r, int s, int t, int p) {
-	if (l <= s && t <= r) return d[p];//ÔÚÇø¼äÄÚ
+	if (l <= s && t <= r) return d[p];//åœ¨åŒºé—´å†…
 	int m = (s + t) / 2;
 	if (s != t && b[p] != 0) pushdown(p, s, t, m);
 	ll ans = 0ll;
@@ -45,8 +45,8 @@ ll getsum(int l, int r, int s, int t, int p) {
 
 void add(int l, int r, ll c, int s, int t, int p) {
 	if (l <= s && t <= r) {
-		d[p] += c * (t - s + 1);//¸Ã½Úµã¸üĞÂ 
-		b[p] += c;//ÀÁ±ê¼Ç¸üĞÂ 
+		d[p] += c * (t - s + 1);//è¯¥èŠ‚ç‚¹æ›´æ–° 
+		b[p] += c;//æ‡’æ ‡è®°æ›´æ–° 
 		return;
 	}
 	int m = (s + t) / 2;
